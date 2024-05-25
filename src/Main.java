@@ -7,21 +7,24 @@ public class Main {
         System.out.println("Enter the rows : ");
         N = sc.nextInt();
 
-        for(i=0 ; i<N;  i++){
-            for(j=0;j<2*N;j++){
-                if(i + j == N-1 || j - i == N-1 || j == ((2*N)-1)/2 || i == ((2*N)-1)/2){
+        for (i = 0; i < N; i++) {
+            for (j = 0; j < 2 * N; j++) {
+                if (i + j == N - 1 || j - i == N - 1 || j == (2 * N - 1) / 2  ) {
                     System.out.print("*");
                 }
-                else{
+                else if(i == (2 * N - 1) / 2 && j!=2 * N - 1){
+                    System.out.print("*");
+                }
+                else {
                     System.out.print(" ");
                 }
-
             }
             System.out.println();
         }
+
         for (i = N - 2; i >= 0; i--) {
-            for (j = 0; j < N * 5; j++) {
-                if (i + j == N - 1 || j - i == N - 1 ||j == ((2*N)-1)/2 || i == (2*N)-1/2) {
+            for (j = 0; j < 2 * N; j++) {
+                if (i + j == N - 1 || j - i == N - 1 || j == (2 * N - 1) / 2 ) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
